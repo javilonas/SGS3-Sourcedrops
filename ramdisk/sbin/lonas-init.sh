@@ -45,11 +45,11 @@ fi
 # Iniciar Bootanimation personalizado
 /res/ext/bootanimation.sh
 
-# Iniciar Sensor
-/res/ext/sensors.sh
-
 # Iniciar Tweaks Lonas_KL
 /res/ext/tweaks.sh
+
+# Iniciar Sensor
+/res/ext/sensors.sh
 
 # Soporte Init.d
 if [ -d /system/etc/init.d ]; then
