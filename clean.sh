@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOOLCHAIN="/home/lonas/crom/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7/bin/arm-linux-androideabi-"
+TOOLCHAIN="/home/lonas/Kernel_Lonas/toolchains/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86/bin/arm-linux-androideabi-"
 DIR="/home/lonas/android/SGS3-Sourcedrops"
 
 echo "#################### Eliminando Restos ####################"
