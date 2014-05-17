@@ -544,6 +544,7 @@ ENDPROC(__setup_mmu)
 @ Enable unaligned access on v6, to allow better code generation
 @ for the decompressor C code:
 __armv6_mmu_cache_on:
+		.arch armv6
 		mrc	p15, 0, r0, c1, c0, 0	@ read SCTLR
 		bic	r0, r0, #2		@ A (no unaligned access fault)
 		orr	r0, r0, #1 << 22	@ U (v6 unaligned access model)
