@@ -70,7 +70,7 @@ const uint8_t CRC_INIT       = 0xff;
 
 static bool shtc1_check_crc(uint8_t *data, uint8_t data_length, uint8_t checksum)
 {
-	uint8_t crc = CRC_INIT;	
+	uint8_t crc = CRC_INIT;
 	uint8_t current_byte;
 	uint8_t bit;
 	//calculates 8-Bit checksum with given polynomial
