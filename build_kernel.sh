@@ -45,7 +45,7 @@ export KERNEL_VERSION="Stock-4.4.2"
 VERSION_KL="SAMMY"
 REVISION="RC"
 
-export KBUILD_BUILD_VERSION="1"
+export KBUILD_BUILD_VERSION="2"
 
 echo "#################### Aplicando Permisos correctos ####################"
 chmod 644 $ROOTFS_PATH/*.rc
