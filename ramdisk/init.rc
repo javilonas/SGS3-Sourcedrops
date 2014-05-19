@@ -8,7 +8,6 @@ import /init.environ.rc
 import /init.usb.rc
 import /init.${ro.hardware}.rc
 import /init.trace.rc
-import /init.container.rc
 
 on early-init
     # Set init and its forked children's oom_adj.
@@ -29,10 +28,10 @@ on early-init
     chown system system /sys/fs/selinux/commit_pending_bools
 
 on init
-
-sysclktz 0
-
-loglevel 3
+    setenforce 0
+    setprop ro.boot.selinux 0
+    sysclktz 0
+    loglevel 3
 
 # for audit message 
     chown system system /proc/avc_msg

@@ -153,7 +153,7 @@ on boot
     setprop ro.build.product smdk4x12
     setprop ro.product.device smdk4x12
     # setprop ro.radio.noril yes
-    setprop ro.securestorage.knox true
+    # setprop ro.securestorage.knox true
 
 # mobicore
     mkdir /data/app/mcRegistry 0775 system system
