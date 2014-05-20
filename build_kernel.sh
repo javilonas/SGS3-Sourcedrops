@@ -56,6 +56,7 @@ chmod 771 $ROOTFS_PATH/data
 chmod 755 $ROOTFS_PATH/dev
 chmod 755 $ROOTFS_PATH/lib
 chmod 755 $ROOTFS_PATH/lib/modules
+chmod 644 $ROOTFS_PATH/lib/modules/*
 chmod 755 $ROOTFS_PATH/proc
 chmod 750 $ROOTFS_PATH/sbin
 chmod 750 $ROOTFS_PATH/sbin/*
