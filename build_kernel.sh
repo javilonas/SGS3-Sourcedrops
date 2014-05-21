@@ -43,9 +43,9 @@ ROOTFS_PATH="/home/lonas/android/SGS3-Sourcedrops/ramdisk"
 RAMFS_TMP="/home/lonas/Kernel_Lonas/tmp/ramfs-source-sgs3"
 export KERNEL_VERSION="Stock-4.4.2"
 VERSION_KL="SAMMY"
-REVISION="RC"
+REVISION="RTM"
 
-export KBUILD_BUILD_VERSION="7"
+export KBUILD_BUILD_VERSION="1"
 
 echo "#################### Aplicando Permisos correctos ####################"
 chmod 644 $ROOTFS_PATH/*.rc
