@@ -45,6 +45,15 @@ fi
 # Iniciar Bootanimation personalizado
 /res/ext/bootanimation.sh
 
+# Iniciar SQlite
+/res/ext/sqlite.sh
+
+# Iniciar Zipalign
+/res/ext/zipalign.sh
+
+# Remontar y Optimizar particiones con EXT4
+/res/ext/optimi_remount.sh
+
 # Iniciar Tweaks Lonas_KL
 /res/ext/tweaks.sh
 
@@ -61,13 +70,23 @@ fi;
 while ! /sbin/busybox pgrep android.process.acore ; do
   /sbin/busybox sleep 1
 done
-  /sbin/busybox sleep 10
+  /sbin/busybox sleep 5
 
 # Iniciar MTP/adb
 /res/ext/usb_mtp.sh
 
 # Iniciar efs_backup
 /res/ext/efs_backup.sh
+
+# Iniciar RAMCHECK
+/res/ext/ramcheck.sh
+
+# Iniciar Liberar Memoria
+/res/ext/libera_ram.sh
+
+/sbin/busybox sleep 8
+
+sync
 
 /sbin/busybox mount -t rootfs -o remount,ro rootfs
 /sbin/busybox mount -o remount,ro /system
