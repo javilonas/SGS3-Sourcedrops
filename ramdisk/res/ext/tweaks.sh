@@ -9,6 +9,14 @@ echo "3" > /proc/sys/vm/drop_caches
 sleep 1
 echo "0" > /proc/sys/vm/drop_caches
 
+#disable cpuidle log
+echo "0" > /sys/module/cpuidle_exynos4/parameters/log_en
+
+# Miscellaneous tweaks
+echo "0" > /proc/sys/vm/block_dump
+echo "5" > /proc/sys/vm/laptop_mode
+echo "0" > /proc/sys/vm/panic_on_oom 
+echo "8" > /proc/sys/vm/page-cluster
 
 # Turn off debugging for certain modules
 echo "0" > /sys/module/wakelock/parameters/debug_mask
@@ -33,4 +41,8 @@ echo NEXT_BUDDY > /sys/kernel/debug/sched_features
 echo ARCH_POWER > /sys/kernel/debug/sched_features
 echo SYNC_WAKEUPS > /sys/kernel/debug/sched_features
 echo HRTICK > /sys/kernel/debug/sched_features
+
+# Fix para problemas Con aplicaciones
+/sbin/busybox setprop ro.kernel.android.checkjni 0
+/sbin/busybox setprop ro.HOME_APP_ADJ -17
 
